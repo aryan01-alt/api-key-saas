@@ -27,3 +27,7 @@ app.include_router(members.router)
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+@app.get("/")
+def read_root():
+    return {"message": "API Key SaaS backend is running! Visit /docs for the API documentation."}
